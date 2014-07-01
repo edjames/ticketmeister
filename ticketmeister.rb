@@ -1,7 +1,7 @@
-load 'sifter_reader.rb'
-load 'pivotal_writer.rb'
+require_relative 'lib/sifter_reader.rb'
+require_relative 'lib/pivotal_writer.rb'
 
-class Ticketer
+class Ticketmeister
   attr_reader :pivotal, :sifter
 
   def initialize

@@ -89,7 +89,7 @@ class SifterReader
 
   def find_ticket(project, number)
     1.upto(project.total_pages) do |page|
-      found = project.open_issues(page).find { |i| i.number == number }
+      found = project.open_issues(page).find { |i| i.number.to_i == number.to_i }
       return found if found
     end
     nil

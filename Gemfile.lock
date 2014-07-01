@@ -30,6 +30,7 @@ GEM
       nokogiri-happymapper (>= 0.5.4)
       rest-client (~> 1.6.0)
       rest-client (~> 1.6.0)
+    rake (10.1.0)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     safe_yaml (1.0.3)
@@ -43,4 +44,5 @@ PLATFORMS
 DEPENDENCIES
   json
   pivotal-tracker
+  rake
   sifter
