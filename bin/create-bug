@@ -1,0 +1,9 @@
+#!/bin/sh
+# create-bug
+
+source ~/.after-mac-dots
+
+cd ~/Development/personal/ticketmeister
+source ~/.rvm/environments/ruby-2.1.2@ticketmeister
+rake create:bug $1
+
