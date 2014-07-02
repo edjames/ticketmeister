@@ -39,4 +39,4 @@ If you use Alfred, you can import the 2 workflows, found in `/workflows`.
 
 ### Copyright
 
-Copyright (c) 2014 Ed James. See LICENSE for details.
+Copyright (c) 2014. See LICENSE for details.
