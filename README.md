@@ -33,6 +33,10 @@ If this is a dev ticket, assuming the estimate for work is 3 pts, do this...
 
 BAM!
 
+### Alfred user?
+
+If you use Alfred, you can import the 2 workflows, found in `/workflows`.
+
 ### Copyright
 
 Copyright (c) 2014 Ed James. See LICENSE for details.
