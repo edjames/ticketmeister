@@ -16,8 +16,8 @@ You will need API tokens from Sifter and Pivotal Tracker. Then put the following
 
 ### General flow
 
-Typically you will create a Sifter issue first, and then once that iss becomes an item of work (development / bug) you will create the Pivotal Tracker ticket. The Ticketmesiter will automate the manual step of creating the Pivotal Tracker ticket for you.
-
+Typically you will create a Sifter issue first, and then once that issue becomes an item of work (development / bug) you will create the Pivotal Tracker ticket.
+The Ticketmesiter will automate the manual step of creating the Pivotal Tracker ticket for you.
 
 ### Usage
 
