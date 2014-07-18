@@ -9,6 +9,9 @@ namespace :create do
 
     Ticketmeister.new.create_bug(number)
 
+    cmd = %Q{ growlnotify -t 'Sifter ticket #{number}' -m 'Successfully created bug ticket' }
+    system cmd
+
     task number.to_sym do ; end
   end
 
@@ -18,6 +21,9 @@ namespace :create do
     estimate = ARGV[2]
 
     Ticketmeister.new.create_feature(number, estimate)
+
+    cmd = %Q{ growlnotify -t 'Sifter ticket #{number}' -m 'Successfully created dev ticket, #{estimate} pts' }
+    system cmd
 
     task number.to_sym do ; end
     task estimate.to_sym do ; end
