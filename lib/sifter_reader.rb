@@ -61,28 +61,37 @@ class SifterReader
   SIFTER_API_TOKEN = ENV['SIFTER_API_TOKEN']
 
   module Projects
-    DEVELOPMENT = 1207
     BUGS        = 2565
+    DEVELOPMENT = 1207
+    SYSOPS      = 2922
   end
 
   def account
     @account ||= Sifter::Account.new(SIFTER_HOSTNAME, SIFTER_API_TOKEN)
   end
 
+  def bug_project
+    @bug_project ||= account.project(Projects::BUGS)
+  end
+
   def dev_project
     @dev_project ||= account.project(Projects::DEVELOPMENT)
   end
 
-  def bug_project
-    @bug_project ||= account.project(Projects::BUGS)
+  def sysops_project
+    @sysops_project ||= account.project(Projects::SYSOPS)
+  end
+
+  def find_bug_ticket(number)
+    find_ticket bug_project, number
   end
 
   def find_dev_ticket(number)
     find_ticket dev_project, number
   end
 
-  def find_bug_ticket(number)
-    find_ticket bug_project, number
+  def find_sysops_ticket(number)
+    find_ticket sysops_project, number
   end
 
   private

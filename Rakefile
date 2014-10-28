@@ -29,4 +29,18 @@ namespace :create do
     task estimate.to_sym do ; end
   end
 
+  desc "Create a Pivotal Tracker sysops ticket"
+  task :sysops do
+    number = ARGV[1]
+    estimate = ARGV[2]
+
+    Ticketmeister.new.create_sysops(number, estimate)
+
+    cmd = %Q{ growlnotify -t 'Sifter ticket #{number}' -m 'Successfully created sysops ticket, #{estimate} pts' }
+    system cmd
+
+    task number.to_sym do ; end
+    task estimate.to_sym do ; end
+  end
+
 end

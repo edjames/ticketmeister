@@ -31,6 +31,10 @@ If this is a dev ticket, assuming the estimate for work is 3 pts, do this...
 
     rake create:feature 4047 3
 
+Same for a sysops ticket, assuming the estimate for work is 3 pts, do this...
+
+    rake create:feature 4047 3
+
 BAM!
 
 ### Alfred user?

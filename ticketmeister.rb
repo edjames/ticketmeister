@@ -24,6 +24,14 @@ class Ticketmeister
       estimate: estimate)
   end
 
+  def create_sysops(sifter_number, estimate)
+    create(
+      sifter.find_sysops_ticket(sifter_number),
+      sifter_number: sifter_number,
+      story_type: :feature,
+      estimate: estimate)
+  end
+
   private
 
   def create(issue, options = {})
