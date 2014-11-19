@@ -37,7 +37,7 @@ module Sifter::Project::Ext
   end
 
   def api_open_issues_url(page = 1)
-    "#{api_issues_url}?s=1&page=#{page}"
+    "#{api_issues_url}?s=1-2&page=#{page}"
   end
 end
 
