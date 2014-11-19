@@ -13,7 +13,8 @@ class Ticketmeister
     create(
       sifter.find_bug_ticket(sifter_number),
       sifter_number: sifter_number,
-      story_type: :bug)
+      story_type: :bug,
+      project: :development)
   end
 
   def create_feature(sifter_number, estimate)
@@ -21,7 +22,8 @@ class Ticketmeister
       sifter.find_dev_ticket(sifter_number),
       sifter_number: sifter_number,
       story_type: :feature,
-      estimate: estimate)
+      estimate: estimate,
+      project: :development)
   end
 
   def create_sysops(sifter_number, estimate)
@@ -29,7 +31,8 @@ class Ticketmeister
       sifter.find_sysops_ticket(sifter_number),
       sifter_number: sifter_number,
       story_type: :feature,
-      estimate: estimate)
+      estimate: estimate,
+      project: :sysops)
   end
 
   private
